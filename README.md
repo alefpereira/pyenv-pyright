@@ -4,7 +4,7 @@ pyenv-pyright is a [pyenv](https://github.com/pyenv/pyenv) plugin to help setup 
 virtualenv for local projects. This plugin helps to create or update `venvPath` and `venv`
 attributes in pyright config file `pyrightconfig.json` to pyenv virtualenvs.
 
-This plugin may come in handy when working with pyright in **neovim** while using pyenv to manage
+This plugin may come in handy when working with pyright in [neovim](https://github.com/neovim/neovim) while using pyenv to manage
 your virtualenvs, since pyright doesn't uses pyenv set with `pyenv local`, a good way to overcome
 this problem is to explicitly set the desired venv in pyright config file `pyrightconfig.json`.
 So with this plugin you can do this with only one command:
