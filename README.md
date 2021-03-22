@@ -2,11 +2,11 @@
 
 pyenv-pyright is a [pyenv](https://github.com/pyenv/pyenv) plugin to help setup [Microsoft Pyright](https://github.com/microsoft/pyright) LSP Server to use
 virtualenv for local projects. This plugin helps to create or update `venvPath` and `venv`
-attributes in pyright config file `.pyrightconfig.json` to pyenv virtualenvs.
+attributes in pyright config file `pyrightconfig.json` to pyenv virtualenvs.
 
 This plugin may come in handy when working with pyright in **neovim** while using pyenv to manage
 your virtualenvs, since pyright doesn't uses pyenv set with `pyenv local`, a good way to overcome
-this problem is to explicitly set the desired venv in pyright config file `.pyrightconfig.json`.
+this problem is to explicitly set the desired venv in pyright config file `pyrightconfig.json`.
 So with this plugin you can do this with only one command:
 
 ```
@@ -54,12 +54,12 @@ Usage: pyenv pyright [virtualenv]
 
 ## Additional Notes
 
-* Update existing `.pyrightconfig.json` file:
+* Update existing `pyrightconfig.json` file:
 
-This script creates pyright LSP server config file `.pyrightconfig.json`
+This script creates pyright LSP server config file `pyrightconfig.json`
 in current directory, setting its attribute `venv` to
 selected virtualenv and `venvPath` to `PYENV_ROOT/versions`.
-If `.pyrightconfig.json` file already exists, update those
+If `pyrightconfig.json` file already exists, update those
 attributes in existing file instead.
 
 * Support virtualenvs know to pyenv:

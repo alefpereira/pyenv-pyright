@@ -7,10 +7,10 @@
 #
 #        [virtualenv] should be a Python version known to pyenv.
 #
-# Create pyright LSP server config file `.pyrightconfig.json`
+# Create pyright LSP server config file `pyrightconfig.json`
 # in current directory, setting its attribute `venv` to
 # selected virtualenv and `venvPath` to `PYENV_ROOT/versions`.
-# If `.pyrightconfig.json` file already exists, update those
+# If `pyrightconfig.json` file already exists, update those
 # attributes in existing file instead.
 #
 # Running `pyenv pyright` without arguments, virtualenv
@@ -47,7 +47,7 @@ if [ "$1" = "--complete" ]; then
   exec pyenv-virtualenvs --bare
 fi
 
-PYRIGHT_FILENAME='.pyrightconfig.json'
+PYRIGHT_FILENAME='pyrightconfig.json'
 PYRIGHT_VENV_PATH="$PYENV_ROOT/versions"
 
 create_new_file() {
