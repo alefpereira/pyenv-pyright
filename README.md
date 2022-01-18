@@ -42,7 +42,7 @@ pass it as argument:
 ```
 
 **Note:** It works only for virtualenvs, it doesn't work for python
-instalations i.e `3.10.0`.
+instalations, for example `pyenv pyright 3.10.0` won't work.
 
 - Command help:
 
@@ -65,7 +65,7 @@ selected virtualenv and `venvPath` to `PYENV_ROOT/versions`.
 If `pyrightconfig.json` file already exists, the script will update those
 attributes in the existing file instead.
 
-### Uses [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) for virtualenv management and command completions:
+### Uses [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) for venv management and command completions:
 
 The pyenv-pyright plugin **supports only virtualenvs known to pyenv**,
 and pyenv-virtualenv is the way to go for venv management in pyenv.
