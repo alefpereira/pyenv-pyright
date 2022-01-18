@@ -65,8 +65,7 @@ selected virtualenv and `venvPath` to `PYENV_ROOT/versions`.
 If `pyrightconfig.json` file already exists, the script will update those
 attributes in the existing file instead.
 
-### Uses [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
-for virtualenv management and command completions:
+### Uses [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) for virtualenv management and command completions:
 
 The pyenv-pyright plugin **supports only virtualenvs known to pyenv**,
 and pyenv-virtualenv is the way to go for venv management in pyenv.
