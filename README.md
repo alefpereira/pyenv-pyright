@@ -41,6 +41,9 @@ pass it as argument:
  pyenv pyright myvenv
 ```
 
+**Note:** It works only for virtualenvs, it doesn't work for python
+instalations i.e `3.10.0`.
+
 - Command help:
 
 ```
@@ -54,29 +57,31 @@ Usage: pyenv pyright [virtualenv]
 
 ## Additional Notes
 
-* Update existing `pyrightconfig.json` file:
+### Update existing `pyrightconfig.json` file:
 
 This script creates pyright LSP server config file `pyrightconfig.json`
-in current directory, setting its attribute `venv` to
+in the current directory, setting its `venv` attribute to
 selected virtualenv and `venvPath` to `PYENV_ROOT/versions`.
-If `pyrightconfig.json` file already exists, update those
-attributes in existing file instead.
+If `pyrightconfig.json` file already exists, the script will update those
+attributes in the existing file instead.
 
-* Support virtualenvs know to pyenv:
+### Uses [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
+for virtualenv management and command completions:
 
-Running `pyenv pyright` without arguments, virtualenv
-returned in `pyenv version-name` will be used. This means
-that the script works with venvs set by `.python-version`,
-activated with `pyenv activate` and also `pyenv shell`,
-but won't support regular venv activated.
+The pyenv-pyright plugin **supports only virtualenvs known to pyenv**,
+and pyenv-virtualenv is the way to go for venv management in pyenv.
+This plugin requires pyenv-virtualenv not only for the venvs but also
+for command completions.
 
-This plugin also does not support passing a venv path as
-arguments (At least, not yet).
-
-* Requires [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv):
-
-Provide command completions. I didn't test without it, and pyenv-virtualenv
-is a also great plugin anyway, so it is good to have it installed.
+If your workflow don't involve using venvs or you don't use pyenv-virtualenv,
+pyenv-pyright plugin may not have any use for you. But if you use venvs,
+and use pyenv to manage python versions, you probably use pyenv-virtualenv
+to manage venvs. If you installed pyenv using its installing tool
+[pyenv-installer](https://github.com/pyenv/pyenv-installer) you already have
+pyenv-virtualenv (if you are not sure check by running `pyenv virtualenvs`),
+in case you don't have it installed yet, install it using the guide in 
+[pyenv-virtualenv installing section](https://github.com/pyenv/pyenv-virtualenv#installing-as-a-pyenv-plugin)
+or with the pyenv-installer tool.
 
 ##  License
 
